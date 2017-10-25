@@ -41,7 +41,3 @@ fit <- lm(Data$PointSpread ~ Data$PointMargin)
 fit
 abline(fit, col = "red")
 summary(fit)
-
-plot(Data$BetLine, Data$WinMargin)
-
-plot(Data$PointMargin, Data$BetLine)
