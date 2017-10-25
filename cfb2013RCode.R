@@ -9,22 +9,14 @@ hist(Data$BetLineDiff, breaks = 25)
 summary(Data$BetLineDiff)
 sd(Data$BetLineDiff)
 
-samp1 <- sample(Data$BetLineDiff, 50)
-hist(samp1)
-samp1
-summary(samp1)
-
-set.seed(42)
-sample_means50 <- rep(NA, 5000)
-
-for(i in 1:5000){
-  samp <- sample(Data$BetLineDiff, 50)
-  sample_means50[i] <- mean(samp)
-}
-hist(sample_means50, breaks = 25)
-summary(sample_means50)
 plot(Data$BetLine, Data$PointMargin)
 fit <- lm(Data$BetLine ~ Data$PointMargin)
 fit
 abline(fit)
-sd(sample_means50)
+
+plot(Data$BetLine, Data$WinMargin)
+
+plot(Data$PointMargin, Data$BetLine)
+
+"Need to completely analyze the histogram for outliers tomorrow.  Make a great explanation of your hypothesis and what you are trying ot find.  Also, figure out the correlation coefficient deal with R and figure out how to explain the results that I get."
+
